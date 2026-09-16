@@ -1,0 +1,78 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<Base
+  title="SchemeWise — Find Health Schemes & Camps"
+  description="Discover government health schemes, check potential eligibility, learn how to apply, and find upcoming health camps — free and easy."
+>
+  <Header />
+  <main>
+    <section class="border-b border-border bg-secondary">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+                <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">SchemeWise: Connecting You to the Health Support You Need</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Find health schemes, check your potential eligibility, understand how to apply, and discover upcoming health camps — all in one place.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="/eligibility" class="rounded-xl bg-primary px-6 py-3.5 text-center text-base font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90">Check My Eligibility</a>
+          <a href="/schemes" class="rounded-xl border border-border bg-card px-6 py-3.5 text-center text-base font-semibold text-foreground transition hover:bg-muted">Explore Health Schemes</a>
+          <a href="/camps" class="rounded-xl border border-border bg-card px-6 py-3.5 text-center text-base font-semibold text-foreground transition hover:bg-muted">Find Health Camps</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <h2 class="text-3xl font-bold text-foreground">How SchemeWise Helps</h2>
+      <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { n: "1", t: "Tell us what you need", d: "Answer a few simple questions — age, state, income range, occupation. No personal documents, no sign-up." },
+          { n: "2", t: "Check available support", d: "We compare your answers against structured eligibility rules of real government health schemes." },
+          { n: "3", t: "Understand your options", d: "Each match explains the benefits, conditions, required documents and how to apply — in simple language." },
+          { n: "4", t: "Apply through official channels", d: "We link you to the official government source so you can verify and continue the application yourself." },
+        ].map((s) => (
+          <li class="rounded-2xl border border-border bg-card p-6">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-sm font-bold text-primary" aria-hidden="true">{s.n}</span>
+            <h3 class="mt-4 text-base font-bold text-foreground">{s.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="border-y border-border bg-muted">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <h2 class="text-3xl font-bold text-foreground">What You Can Do Here</h2>
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          {[
+            { t: "Eligibility Checker", d: "Answer a short questionnaire and see which health schemes you may potentially qualify for, with clear reasons for each match.", href: "/eligibility", cta: "Start the check" },
+            { t: "Health Scheme Directory", d: "Search and filter government health schemes by state, benefit type and target group. Every scheme explains who can apply and how.", href: "/schemes", cta: "Browse schemes" },
+            { t: "Health Camps", d: "Find upcoming health screening camps by district and service. Past camps are automatically marked as completed.", href: "/camps", cta: "See upcoming camps" },
+            { t: "Find Help", d: "Not sure where to start? Pick the kind of support you need — financial help, insurance, screening — and get guided recommendations.", href: "/find-help", cta: "Get guided help" },
+          ].map((m) => (
+            <article class="flex flex-col rounded-2xl border border-border bg-card p-6 md:p-8">
+              <h3 class="text-xl font-bold text-foreground">{m.t}</h3>
+              <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{m.d}</p>
+              <a href={m.href} class="mt-5 inline-flex w-fit items-center gap-1.5 rounded-lg bg-secondary px-4 py-2.5 text-sm font-semibold text-primary transition hover:bg-secondary/70">
+                {m.cta}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="rounded-3xl bg-primary px-6 py-12 text-center md:px-16 md:py-16">
+        <h2 class="text-3xl font-bold text-primary-foreground md:text-4xl">Start by checking your eligibility</h2>
+        <p class="mx-auto mt-4 max-w-xl leading-relaxed text-primary-foreground/85">
+          It takes about two minutes. Your answers are used only to identify potentially relevant schemes — never Aadhaar numbers, bank details or medical records.
+        </p>
+        <a href="/eligibility" class="mt-8 inline-block rounded-xl bg-card px-8 py-3.5 text-base font-semibold text-foreground shadow transition hover:bg-muted">Check My Eligibility</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>

@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FindHelp from "@/components/FindHelp";
+---
+<Base
+  title="Find Help – Health Support Finder"
+  description="Choose what kind of health support you need — financial aid, insurance, screening, vaccines or government schemes — and get matched."
+>
+  <Header />
+  <main class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <h1 class="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">Find Help</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
+      Choose the kind of support you need and we'll point you to relevant schemes and camps — drawn from the same verified directory used across SchemeWise.
+    </p>
+    <div class="mt-8">
+      <FindHelp client:visible />
+    </div>
+  </main>
+  <Footer />
+</Base>

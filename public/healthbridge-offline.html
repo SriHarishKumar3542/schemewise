@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchemeWise – Health Support & Scheme Finder</title>
+<meta name="description" content="Find Indian government health schemes, check eligibility, learn how to apply, and discover upcoming health camps — all in one simple public platform.">
+<link rel="canonical" href="https://healthbridge-fjtv.kleap.io/healthbridge-offline">
+<meta property="og:title" content="SchemeWise – Health Support & Scheme Finder">
+<meta property="og:description" content="Find Indian government health schemes, check eligibility, learn how to apply, and discover upcoming health camps — all in one simple public platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://healthbridge-fjtv.kleap.io/healthbridge-offline">
+<meta property="og:image" content="https://healthbridge-fjtv.kleap.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SchemeWise – Health Support & Scheme Finder">
+<meta name="twitter:description" content="Find Indian government health schemes, check eligibility, learn how to apply, and discover upcoming health camps — all in one simple public platform.">
+<meta name="twitter:image" content="https://healthbridge-fjtv.kleap.io/og-image.png">
+<style>
+  :root{--p:#0f766e;--p2:#134e4a;--bg:#f8fafc;--card:#fff;--txt:#0f172a;--mut:#64748b;--line:#e2e8f0;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55}
+  header{background:var(--p2);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:10}
+  .brand{font-weight:800;font-size:1.2rem}
+  nav{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+  nav button{background:transparent;color:#e2f5f2;border:0;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:.9rem}
+  nav button.active,nav button:hover{background:rgba(255,255,255,.15);color:#fff}
+  main{max-width:1000px;margin:0 auto;padding:20px 16px 60px}
+  h1{font-size:1.8rem;margin:10px 0 6px}
+  h2{font-size:1.3rem;margin:24px 0 10px}
+  .sub{color:var(--mut);max-width:640px}
+  .btn{display:inline-block;background:var(--p);color:#fff;border:0;padding:12px 18px;border-radius:10px;font-size:1rem;cursor:pointer;margin:6px 8px 6px 0;text-decoration:none}
+  .btn.sec{background:#fff;color:var(--p);border:1.5px solid var(--p)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:10px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+  .badge{display:inline-block;background:#ccfbf1;color:#115e59;font-size:.75rem;font-weight:600;padding:2px 10px;border-radius:999px;margin:2px 4px 2px 0}
+  .badge.gray{background:#f1f5f9;color:#475569}
+  .badge.green{background:#dcfce7;color:#166534}
+  label{display:block;font-weight:600;margin:12px 0 4px}
+  select,input,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:1rem;background:#fff}
+  .err{color:#b91c1c;font-weight:600;margin-top:8px}
+  .ok{color:#166534;font-weight:700}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 14px;font-size:.9rem;margin:12px 0}
+  .steps{margin-left:20px}
+  ul.pad{margin-left:20px}
+  .muted{color:var(--mut);font-size:.85rem}
+  .hide{display:none}
+  footer{border-top:1px solid var(--line);padding:16px;text-align:center;color:var(--mut);font-size:.85rem}
+  a{color:var(--p)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">SchemeWise <span style="font-weight:400;font-size:.8rem">· Offline Copy</span></div>
+  <nav id="nav">
+    <button data-p="home" class="active">Home</button>
+    <button data-p="elig">Check Eligibility</button>
+    <button data-p="schemes">Health Schemes</button>
+    <button data-p="camps">Health Camps</button>
+    <button data-p="help">Find Help</button>
+    <button data-p="about">About</button>
+  </nav>
+</header>
+<main>
+
+<section id="home">
+  <h1>Connecting You to the Health Support You Need</h1>
+  <p class="sub">Find health schemes, check your potential eligibility, understand how to apply, and discover upcoming health camps — all in one place.</p>
+  <div style="margin:14px 0">
+    <button class="btn" onclick="go('elig')">Check My Eligibility</button>
+    <button class="btn sec" onclick="go('schemes')">Explore Health Schemes</button>
+    <button class="btn sec" onclick="go('camps')">Find Health Camps</button>
+  </div>
+  <h2>How SchemeWise Helps</h2>
+  <div class="grid">
+    <div class="card"><b>1. Tell us what you need</b><p class="muted">Answer a few simple questions — no account or personal documents needed.</p></div>
+    <div class="card"><b>2. Check available support</b><p class="muted">We compare your answers against structured eligibility rules.</p></div>
+    <div class="card"><b>3. Understand your options</b><p class="muted">See benefits, required documents and application steps in simple language.</p></div>
+    <div class="card"><b>4. Apply through official channels</b><p class="muted">Every scheme links to its official government source.</p></div>
+  </div>
+  <h2>Explore the Modules</h2>
+  <div class="grid">
+    <div class="card"><b>Eligibility Checker</b><p class="muted">Find schemes you may potentially qualify for.</p></div>
+    <div class="card"><b>Health Schemes</b><p class="muted">Search and filter the scheme directory.</p></div>
+    <div class="card"><b>Health Camps</b><p class="muted">Upcoming screening camps by district and service.</p></div>
+    <div class="card"><b>Find Help</b><p class="muted">Guided support by the type of help you need.</p></div>
+  </div>
+  <p style="margin:16px 0"><b>Start by checking your eligibility</b> — <button class="btn" onclick="go('elig')">Check Eligibility</button></p>
+</section>
+
+<section id="elig" class="hide">
+  <h1>Check Your Eligibility</h1>
+  <p class="sub">Answer a few basic questions to see which schemes you may potentially qualify for.</p>
+  <div class="note">Your answers are used to identify potentially relevant schemes. Please do not enter sensitive information such as Aadhaar numbers, bank details or medical records. Nothing you type here is saved or sent anywhere — this copy runs fully offline.</div>
+  <div class="card">
+    <label for="f-age">Age</label>
+    <input id="f-age" type="number" min="0" max="120" placeholder="e.g. 28">
+    <label for="f-gender">Gender</label>
+    <select id="f-gender"><option value="">Select…</option><option value="female">Female</option><option value="male">Male</option><option value="other">Prefer not to say</option></select>
+    <label for="f-state">State</label>
+    <select id="f-state"><option value="">Select…</option></select>
+    <label for="f-income">Annual household income range</label>
+    <select id="f-income"><option value="">Select…</option></select>
+    <label for="f-occ">Occupation</label>
+    <select id="f-occ"><option value="">Select…</option></select>
+    <label for="f-fam">Family size (number of members)</label>
+    <input id="f-fam" type="number" min="1" max="30" placeholder="e.g. 4">
+    <div id="e-err" class="err hide"></div>
+    <button class="btn" style="margin-top:14px" onclick="checkElig()">See Potential Matches</button>
+  </div>
+  <div id="e-res"></div>
+</section>
+
+<section id="schemes" class="hide">
+  <h1>Health Scheme Directory</h1>
+  <div class="card">
+    <input id="s-q" type="search" placeholder="Search schemes…" oninput="renderSchemes()">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:10px">
+      <select id="s-state" onchange="renderSchemes()"><option value="">All States</option></select>
+      <select id="s-type" onchange="renderSchemes()"><option value="">All Benefit Types</option></select>
+      <select id="s-group" onchange="renderSchemes()"><option value="">All Target Groups</option></select>
+    </div>
+  </div>
+  <div id="s-list"></div>
+</section>
+
+<section id="camps" class="hide">
+  <h1>Upcoming Health Camps</h1>
+  <p class="muted">Sample / demonstration data — camps below are examples, not real events.</p>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+      <select id="c-dist" onchange="renderCamps()"><option value="">All Districts</option></select>
+      <select id="c-serv" onchange="renderCamps()"><option value="">All Services</option></select>
+      <select id="c-when" onchange="renderCamps()"><option value="upcoming">Upcoming only</option><option value="all">Include completed</option></select>
+    </div>
+  </div>
+  <div id="c-list"></div>
+</section>
+
+<section id="help" class="hide">
+  <h1>What kind of health support are you looking for?</h1>
+  <div class="grid" id="h-grid"></div>
+  <div id="h-res"></div>
+</section>
+
+<section id="about" class="hide">
+  <h1>About SchemeWise</h1>
+  <p>SchemeWise is a social-benefit platform designed to make public health information easier to discover and understand. It helps users explore health schemes, check potential eligibility, understand application procedures and find upcoming health camps in one place.</p>
+  <h2>Our Vision</h2>
+  <p>To make access to health-support information simpler, clearer and more accessible through technology.</p>
+  <h2>Our Approach</h2>
+  <p>SchemeWise focuses on guidance and information rather than collecting unnecessary personal data or replacing official healthcare services.</p>
+  <h2>Project Objectives</h2>
+  <div class="grid" id="obj-grid"></div>
+  <h2>Project Modules</h2>
+  <ul class="pad">
+    <li>Eligibility Checker</li><li>Health Scheme Directory</li><li>Scheme Details &amp; Application Guide</li>
+    <li>Health Camps</li><li>Find Help</li><li>About SchemeWise</li><li>Developer Information</li>
+  </ul>
+  <h2>Target Users</h2>
+  <ul class="pad">
+    <li>General public</li><li>Families looking for health-support schemes</li><li>Students and young adults</li>
+    <li>Senior citizens and caregivers</li><li>People looking for free/low-cost health services</li>
+    <li>People who find government scheme information difficult to navigate</li>
+  </ul>
+  <h2>About the Developer</h2>
+  <div class="card">
+    <p><b>Sri Harish Kumar S</b><br>Second-year Computer Science Engineering Student<br>MIT Campus, Anna University</p>
+    <p style="margin-top:8px">"I'm a second-year Computer Science Engineering student at MIT Campus, Anna University. I'm building my foundation in programming and core computer science concepts, and I enjoy translating problems into working code — most recently through a cipher encryption project in C and C++.</p>
+    <p>My goal is to strengthen my fundamentals, gain hands-on project experience, and start contributing in real engineering environments through internships."</p>
+    <table style="margin-top:10px;font-size:.95rem">
+      <tr><td><b>Name</b></td><td>Sri Harish Kumar S</td></tr>
+      <tr><td><b>Education</b></td><td>B.E. Computer Science and Engineering</td></tr>
+      <tr><td><b>Year</b></td><td>Second Year</td></tr>
+      <tr><td><b>Institution</b></td><td>MIT Campus, Anna University</td></tr>
+    </table>
+    <p style="margin-top:10px">
+      <a href="https://github.com/SriHarishKumar3542">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/sri-harish-kumar-s-4b44b1379">LinkedIn</a> ·
+      <a href="mailto:sriharishkumar2008@gmail.com">sriharishkumar2008@gmail.com</a>
+    </p>
+  </div>
+  <h2>Important Notice</h2>
+  <div class="note">SchemeWise provides information and eligibility guidance. Final eligibility and approval are determined by the respective scheme authority.</div>
+</section>
+
+</main>
+<footer>SchemeWise — offline demonstration copy · Information only, not official eligibility · Sample camp data is labelled as such</footer>
+
+<script>
+const INCOMES=[["Below ₹1,00,000",100000],["₹1,00,000 – ₹3,00,000",300000],["₹3,00,000 – ₹5,00,000",500000],["Above ₹5,00,000",Infinity]];
+const OCCUPATIONS=["Student","Unemployed","Daily wage labourer","Farmer","Self-employed","Salaried (private)","Government employee","Homemaker","Senior citizen / Retired"];
+const STATES=["Andhra Pradesh","Assam","Bihar","Chhattisgarh","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Odisha","Punjab","Rajasthan","Tamil Nadu","Telangana","Uttar Pradesh","Uttarakhand","West Bengal"];
+const SCHEMES=[
+{id:"pmjay",name:"Ayushman Bharat PM-JAY",description:"India's largest health insurance scheme. Covers free treatment up to ₹5 lakh per family per year at empanelled public and private hospitals.",benefits:["Cashless treatment up to ₹5 lakh per family per year","Covers 1,900+ medical procedures, including surgery and hospitalisation","No cap on family size, age or gender","Valid at all empanelled hospitals across India"],stateCoverage:"All India",targetGroups:["Low-income families identified under SECC","Families without existing health cover"],benefitType:"Health Insurance",eligibilityRules:{minAge:0,incomeLimit:300000,otherCriteria:"Priority goes to families listed in the SECC deprivation database or covered by state-specific criteria. Income is an indicator — actual coverage depends on the official beneficiary list."},requiredDocuments:["Aadhaar card","Ration card (used to check the SECC beneficiary list)","Mobile number for OTP verification"],applicationSteps:["Check whether your family name appears on the official PM-JAY 'Am I Eligible?' portal.","If listed, visit a nearby Ayushman card creation centre (often at empanelled hospitals or Common Service Centres).","Verify identity with Aadhaar and collect your Ayushman card.","Use the card at any empanelled hospital for cashless treatment."],officialUrl:"https://pmjay.gov.in",officialSource:"National Health Authority, Government of India",lastUpdated:"November 2024",incomeNote:"Income is only an indicator. Final coverage is decided by the official SECC beneficiary list, not by SchemeWise."},
+{id:"jsy",name:"Janani Suraksha Yojana (JSY)",description:"A safe-motherhood scheme that promotes institutional delivery by giving cash assistance to pregnant women who deliver in a public health facility.",benefits:["Cash assistance for institutional delivery in a government facility","Free delivery and caesarean sections at public hospitals","Referral transport support in case of emergency"],stateCoverage:"All India (assistance amounts vary by state)",targetGroups:["Pregnant women","Women from low-income households"],benefitType:"Maternal & Child Health",eligibilityRules:{minAge:18,gender:"female",incomeLimit:300000,otherCriteria:"Applies to pregnant women who deliver in a public health facility. Higher assistance in low-performing states."},requiredDocuments:["Aadhaar card","MCP (Mother and Child Protection) card","Bank account details for cash transfer"],applicationSteps:["Register the pregnancy at the nearest Anganwadi centre or public health facility.","Plan the delivery at a government hospital or PHC/CHC.","The cash assistance is credited after delivery, usually through the hospital or directly to the bank account."],officialUrl:"https://nhm.gov.in",officialSource:"National Health Mission, Ministry of Health & Family Welfare",lastUpdated:"November 2024"},
+{id:"pmmvy",name:"Pradhan Mantri Matru Vandana Yojana (PMMVY)",description:"A maternity benefit programme that provides a cash incentive to pregnant women and lactating mothers for the first living child.",benefits:["₹5,000 cash benefit for the first living child","Paid in instalments linked to pregnancy registration, antenatal check-ups and registration of the child's birth"],stateCoverage:"All India",targetGroups:["Pregnant women aged 19+","Lactating mothers with their first living child"],benefitType:"Maternal & Child Health",eligibilityRules:{minAge:19,gender:"female",otherCriteria:"Applies to the first living child. The woman should not be employed by the central or state government."},requiredDocuments:["Aadhaar card","Bank account linked to Aadhaar","MCP card / pregnancy registration proof","Child birth certificate (for later instalments)"],applicationSteps:["Fill Form 1-A on the official PMMVY portal or through the Anganwadi centre within 150 days of LMP.","Attend the required antenatal check-ups and keep the MCP card updated.","Submit claims for later instalments after the child's birth registration."],officialUrl:"https://pmmvy.wcd.gov.in",officialSource:"Ministry of Women & Child Development",lastUpdated:"November 2024"},
+{id:"rbsk",name:"Rashtriya Bal Swasthya Karyakram (RBSK)",description:"A child health screening programme under the National Health Mission. Children from birth to 18 years are screened for the '4 Ds' — defects, deficiencies, diseases and developmental delays.",benefits:["Free health screening at Anganwadi centres and government schools","Early detection of birth defects, deficiencies, diseases and developmental delays","Free referral and follow-up treatment at district hospitals"],stateCoverage:"All India",targetGroups:["Children aged 0–6 (Anganwadi)","School children aged 6–18"],benefitType:"Free Screening",eligibilityRules:{maxAge:18,otherCriteria:"Screening happens through schools and Anganwadi centres. No income condition applies."},requiredDocuments:[],applicationSteps:["No separate application is needed — screening teams visit schools and Anganwadi centres on schedule.","If your child is not in school or Anganwadi, contact the local Anganwadi worker or PHC to be included.","Children needing care are referred to the nearest District Early Intervention Centre (DEIC)."],officialUrl:"https://nhm.gov.in",officialSource:"National Health Mission, Ministry of Health & Family Welfare",lastUpdated:"November 2024"},
+{id:"pmdialysis",name:"Pradhan Mantri National Dialysis Programme",description:"Provides free dialysis services to Below Poverty Line (BPL) kidney patients at district hospitals under public-private partnership.",benefits:["Free haemodialysis sessions at district hospitals","Consumables, medicines and dialysis staff covered","Reduces the need to travel to large cities for treatment"],stateCoverage:"All India (available at participating district hospitals)",targetGroups:["BPL kidney patients requiring dialysis"],benefitType:"Medicine Assistance",eligibilityRules:{incomeLimit:100000,otherCriteria:"For patients diagnosed with kidney failure requiring maintenance dialysis, with a BPL certificate."},requiredDocuments:["BPL certificate / ration card","Doctor's prescription or medical report confirming dialysis need","Aadhaar card"],applicationSteps:["Obtain a BPL certificate or use your ration card if it lists the BPL category.","Visit the dialysis unit at your district hospital with the doctor's report.","Registration and session scheduling are done at the hospital dialysis centre."],officialUrl:"https://nhm.gov.in",officialSource:"National Health Mission, Ministry of Health & Family Welfare",lastUpdated:"November 2024"}
+];
+const day=n=>new Date(Date.now()+n*86400000).toISOString().slice(0,10);
+const CAMPS=[
+{id:"camp-1",name:"Community Health Screening Day",date:day(5),time:"9:00 AM – 3:00 PM",location:"Corporation Community Hall, Anna Nagar",district:"Chennai",services:["General health screening","Blood pressure screening","Diabetes screening"],organiser:"District Health Society (sample data)",contact:"Available on the notice board of the venue",registrationUrl:null},
+{id:"camp-2",name:"Women's Wellness Camp",date:day(9),time:"10:00 AM – 2:00 PM",location:"Government Higher Secondary School, Gandhipuram",district:"Coimbatore",services:["Women's health screening","General health screening","Dental screening"],organiser:"Urban Primary Health Centre (sample data)",contact:"Contact the local UPHC office",registrationUrl:null},
+{id:"camp-3",name:"Child Immunisation & Eye Screening Drive",date:day(14),time:"9:30 AM – 1:30 PM",location:"Taluk Hospital Campus",district:"Madurai",services:["Vaccination","Eye screening"],organiser:"Block Medical Office (sample data)",contact:"Contact the taluk hospital helpdesk",registrationUrl:null},
+{id:"camp-4",name:"Senior Citizen Health Check-up Camp",date:day(21),time:"8:00 AM – 12:00 PM",location:"Mahatma Gandhi Government College Grounds",district:"Tiruchirappalli",services:["General health screening","Blood pressure screening","Diabetes screening","Eye screening"],organiser:"NPHCE Unit, District Hospital (sample data)",contact:"Contact the district hospital geriatric OPD",registrationUrl:null},
+{id:"camp-5",name:"Free Dental & Diabetes Screening Camp",date:day(-4),time:"9:00 AM – 2:00 PM",location:"Community Health Centre",district:"Chennai",services:["Dental screening","Diabetes screening"],organiser:"District Health Society (sample data)",contact:"—",registrationUrl:null}];
+const OBJECTIVES=["Simplify access to health schemes","Provide an eligibility checker","Explain schemes clearly","Improve awareness of health camps","Guide users toward official sources","Reduce information barriers","Create a practical social-benefit solution"];
+const HELP=[["💰 Financial Assistance","Financial Assistance"],["🛡️ Health Insurance","Health Insurance"],["🩺 Free Health Screening","Free Screening"],["💊 Medicine Assistance","Medicine Assistance"],["💉 Vaccination","Vaccination"],["📋 Government Health Scheme","All"]];
+
+const $=id=>document.getElementById(id);
+function fmt(iso){return new Date(iso+"T00:00:00").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short",year:"numeric"})}
+
+// populate selects
+STATES.forEach(s=>$("f-state").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+INCOMES.forEach(([l])=>$("f-income").insertAdjacentHTML("beforeend",`<option>${l}</option>`));
+OCCUPATIONS.forEach(o=>$("f-occ").insertAdjacentHTML("beforeend",`<option>${o}</option>`));
+[...new Set(SCHEMES.map(s=>s.stateCoverage.split(" (")[0]))].forEach(s=>$("s-state").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+[...new Set(SCHEMES.map(s=>s.benefitType))].forEach(t=>$("s-type").insertAdjacentHTML("beforeend",`<option>${t}</option>`));
+[...new Set(SCHEMES.flatMap(s=>s.targetGroups))].forEach(g=>$("s-group").insertAdjacentHTML("beforeend",`<option>${g}</option>`));
+[...new Set(CAMPS.map(c=>c.district))].forEach(d=>$("c-dist").insertAdjacentHTML("beforeend",`<option>${d}</option>`));
+[...new Set(CAMPS.flatMap(c=>c.services))].forEach(v=>$("c-serv").insertAdjacentHTML("beforeend",`<option>${v}</option>`));
+OBJECTIVES.forEach((o,i)=>$("obj-grid").insertAdjacentHTML("beforeend",`<div class="card"><b>${i+1}. ${o}</b></div>`));
+HELP.forEach(([label,cat])=>$("h-grid").insertAdjacentHTML("beforeend",`<button class="card" style="text-align:left;cursor:pointer" onclick="findHelp('${cat}')"><b style="font-size:1.05rem">${label}</b><p class="muted">Show matching recommendations</p></button>`));
+
+function go(p){document.querySelectorAll("main > section").forEach(s=>s.classList.add("hide"));$(p).classList.remove("hide");document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active",b.dataset.p===p));window.scrollTo(0,0)}
+document.querySelectorAll("#nav button").forEach(b=>b.onclick=()=>go(b.dataset.p));
+
+function matchSchemes(a){const out=[];for(const s of SCHEMES){const r=s.eligibilityRules,reasons=[];let ok=true;
+ if(r.minAge!=null){a.age<r.minAge?ok=false:reasons.push(`Age ${a.age} meets the minimum age of ${r.minAge} for this scheme.`)}
+ if(r.maxAge!=null){a.age>r.maxAge?ok=false:reasons.push(`Age ${a.age} is within the scheme's age range (up to ${r.maxAge}).`)}
+ if(r.gender){a.gender!==r.gender?ok=false:reasons.push(a.gender==="female"?"The scheme is for women, which matches your answer.":"The scheme is for men, which matches your answer.")}
+ if(r.incomeLimit!=null){const max=INCOMES.find(i=>i[0]===a.income);const v=max?max[1]:Infinity;v>r.incomeLimit?ok=false:reasons.push("Your household income range is within the scheme's income limit.")}
+ if(r.occupations){r.occupations.includes(a.occupation)?reasons.push("Your occupation matches the group this scheme serves."):ok=false}
+ if(r.familySizeMax!=null){a.familySize>r.familySizeMax?ok=false:reasons.push(`Your family size (${a.familySize}) is within the limit of ${r.familySizeMax}.`)}
+ if(ok)out.push({scheme:s,reasons})}return out}
+
+function checkElig(){const age=parseInt($("f-age").value),gender=$("f-gender").value,state=$("f-state").value,income=$("f-income").value,occ=$("f-occ").value,fam=parseInt($("f-fam").value);
+ const err=$("e-err");const missing=[];
+ if(isNaN(age)||age<0||age>120)missing.push("a valid age");
+ if(!gender)missing.push("gender");if(!state)missing.push("state");if(!income)missing.push("income range");if(!occ)missing.push("occupation");if(isNaN(fam)||fam<1)missing.push("family size");
+ if(missing.length){err.textContent="Please provide: "+missing.join(", ")+".";err.classList.remove("hide");$("e-res").innerHTML="";return}
+ err.classList.add("hide");
+ const {matches}=matchSchemes({age,gender,state,income,occupation:occ,familySize:fam});
+ if(!matches.length){$("e-res").innerHTML=`<div class="card"><b>We couldn't find a potential match based on the information provided.</b><p class="muted">Try different answers, explore all schemes, or use Find Help.</p><button class="btn" onclick="go('elig')">Try Again</button><button class="btn sec" onclick="go('schemes')">Explore All Schemes</button><button class="btn sec" onclick="go('help')">Use Find Help</button></div>`;return}
+ $("e-res").innerHTML=`<h2>${matches.length} potential match${matches.length>1?"es":""} found</h2>`+matches.map(m=>`<div class="card"><span class="badge green">✓ Potential Match</span><h3>${m.scheme.name}</h3>${m.reasons.map(r=>`<p class="muted">• ${r}</p>`).join("")}<p><b>Main benefits:</b> ${m.scheme.benefits[0]}</p><p class="muted"><b>Important condition:</b> ${m.scheme.eligibilityRules.otherCriteria||"—"}</p><button class="btn" onclick="viewScheme('${m.scheme.id}')">View Details</button></div>`).join("")}
+
+function viewScheme(id){const s=SCHEMES.find(x=>x.id===id);if(!s)return;
+ $("e-res").innerHTML=`<div class="card"><h2>${s.name}</h2>
+ <h3>Overview</h3><p>${s.description}</p>
+ <h3>Who Can Apply?</h3><ul class="pad"><li>State / coverage: ${s.stateCoverage}</li><li>Target groups: ${s.targetGroups.join(", ")}</li><li>${s.eligibilityRules.otherCriteria||"See official source for full criteria."}</li></ul>
+ <h3>Benefits</h3><ul class="pad">${s.benefits.map(b=>`<li>${b}</li>`).join("")}</ul>
+ <h3>Required Documents</h3>${s.requiredDocuments.length?`<ul class="pad">${s.requiredDocuments.map(d=>`<li>${d}</li>`).join("")}</ul>`:`<p class="muted">No documents needed from the user for this scheme.</p>`}
+ <h3>How to Apply</h3><ol class="steps">${s.applicationSteps.map(st=>`<li>${st}</li>`).join("")}</ol>
+ ${s.incomeNote?`<p class="note">${s.incomeNote}</p>`:""}
+ <h3>Official Source</h3><p><a href="${s.officialUrl}" target="_blank" rel="noopener">${s.officialUrl}</a> — ${s.officialSource}</p>
+ <p class="muted">Last updated: ${s.lastUpdated}</p>
+ <div class="note">SchemeWise provides information and eligibility guidance. Final eligibility and approval are determined by the respective scheme authority.</div>
+ <button class="btn sec" onclick="go('schemes')">Back to Directory</button></div>`;
+ document.querySelectorAll("main > section").forEach(sec=>sec.classList.add("hide"));$("schemes").classList.remove("hide");$("schemes").querySelector(".card").classList.add("hide");window.scrollTo(0,0)}
+$("s-q").addEventListener("input",()=>{$("schemes").querySelector(".card").classList.remove("hide")});
+
+function renderSchemes(){const q=($("s-q").value||"").toLowerCase(),st=$("s-state").value,ty=$("s-type").value,gr=$("s-group").value;
+ const list=SCHEMES.filter(s=>(!q||(s.name+s.description+s.benefitType).toLowerCase().includes(q))&&(!st||s.stateCoverage.includes(st))&&(!ty||s.benefitType===ty)&&(!gr||s.targetGroups.includes(gr)));
+ $("s-list").innerHTML=list.length?`<div class="grid">${list.map(s=>`<div class="card"><h3>${s.name}</h3><p class="muted">${s.description}</p><span class="badge">${s.benefitType}</span><span class="badge gray">${s.stateCoverage}</span><p><b>For:</b> ${s.targetGroups.join(", ")}</p><button class="btn" onclick="viewScheme('${s.id}')">View Details</button></div>`).join("")}</div>`:`<div class="card"><b>No schemes match your search.</b><p class="muted">Try clearing a filter or using a shorter search term.</p></div>`}
+
+function renderCamps(){const d=$("c-dist").value,v=$("c-serv").value,when=$("c-when").value,today=new Date().toISOString().slice(0,10);
+ const list=CAMPS.filter(c=>(!d||c.district===d)&&(!v||c.services.includes(v))&&(when==="all"||c.date>=today));
+ $("c-list").innerHTML=list.length?list.map(c=>{const up=c.date>=today;return `<div class="card"><h3>${c.name}</h3><span class="badge ${up?"green":"gray"}">${up?"Upcoming":"Completed"}</span><p><b>Date:</b> ${fmt(c.date)} · ${c.time}</p><p><b>Location:</b> ${c.location}, ${c.district} district</p><p><b>Services:</b> ${c.services.map(s=>`<span class="badge gray">${s}</span>`).join("")}</p><p class="muted"><b>Organiser:</b> ${c.organiser} · <b>Contact:</b> ${c.contact}</p></div>`}).join(""):`<div class="card"><b>No camps found.</b><p class="muted">${when==="upcoming"?"No upcoming camps match these filters right now — try 'Include completed' or clear the filters.":"No camps match these filters."}</p></div>`}
+
+function findHelp(cat){let html="";
+ if(cat==="Financial Assistance"||cat==="Health Insurance"||cat==="All"){const list=SCHEMES.filter(s=>cat==="All"||s.benefitType===cat);
+  html+=`<h2>Relevant Schemes</h2>`+(list.length?list.map(s=>`<div class="card"><h3>${s.name}</h3><p class="muted">${s.description}</p><button class="btn" onclick="viewScheme('${s.id}')">View Details</button></div>`).join(""):`<div class="card"><b>No schemes found in this category.</b></div>`)}
+ if(cat==="Free Screening"||cat==="Vaccination"||cat==="All"){const key=cat==="Vaccination"?"Vaccination":cat==="Free Screening"?"General health screening":null;
+  const list=CAMPS.filter(c=>c.date>=new Date().toISOString().slice(0,10)&&(!key||c.services.includes(key)));
+  html+=`<h2>Upcoming Camps</h2>`+(list.length?list.map(c=>`<div class="card"><h3>${c.name}</h3><span class="badge green">Upcoming</span><p>${fmt(c.date)} · ${c.time} · ${c.location}, ${c.district}</p></div>`).join(""):`<div class="card"><b>No upcoming camps in this category right now.</b></div>`)}
+ if(cat==="Medicine Assistance"){const list=SCHEMES.filter(s=>s.benefitType==="Medicine Assistance");
+  html+=`<h2>Medicine Support</h2><div class="note">Free medicines are also available at government hospitals and Jan Aushadhi Kendras. Ask at your nearest PHC or district hospital pharmacy counter.</div>`+(list.length?list.map(s=>`<div class="card"><h3>${s.name}</h3><p class="muted">${s.description}</p><button class="btn" onclick="viewScheme('${s.id}')">View Details</button></div>`).join(""):"")}
+ $("h-res").innerHTML=html;$("h-res").scrollIntoView({behavior:"smooth"})}
+
+renderSchemes();renderCamps();
+</script>
+</body>
+</html>

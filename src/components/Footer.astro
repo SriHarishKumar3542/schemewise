@@ -1,0 +1,29 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-border bg-card">
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-sm">
+        <p class="text-lg font-bold text-foreground">SchemeWise</p>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Making health support easier to find — a social-benefit platform for scheme awareness, eligibility guidance and health camp discovery.
+        </p>
+      </div>
+      <nav class="grid grid-cols-2 gap-x-10 gap-y-2 text-sm" aria-label="Footer navigation">
+        <a href="/eligibility" class="text-muted-foreground hover:text-foreground">Check Eligibility</a>
+        <a href="/schemes" class="text-muted-foreground hover:text-foreground">Health Schemes</a>
+        <a href="/camps" class="text-muted-foreground hover:text-foreground">Health Camps</a>
+        <a href="/find-help" class="text-muted-foreground hover:text-foreground">Find Help</a>
+        <a href="/about" class="text-muted-foreground hover:text-foreground">About</a>
+        <a href="/about#developer" class="text-muted-foreground hover:text-foreground">About the Developer</a>
+      </nav>
+    </div>
+    <div class="mt-8 border-t border-border pt-6">
+      <p class="text-xs leading-relaxed text-muted-foreground">
+        SchemeWise provides information and eligibility guidance only. Final eligibility and approval are determined by the respective scheme authority. Always verify details on official government websites before applying.
+      </p>
+      <p class="mt-3 text-xs text-muted-foreground">© {year} SchemeWise · Built by Sri Harish Kumar S, MIT Campus, Anna University</p>
+    </div>
+  </div>
+</footer>
