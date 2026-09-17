@@ -9,7 +9,7 @@ The platform brings together health scheme discovery, potential eligibility guid
 
 ---
 
-## 🌐 Project Overview
+## 🌐 PROJECT OVERVIEW
 
 Finding information about government health schemes and public healthcare support can be difficult because information is often distributed across different sources.
 
@@ -28,7 +28,7 @@ SchemeWise is designed as an information and guidance platform. It does **not** 
 
 ---
 
-## 🎯 Objectives
+## 🎯 OBJECTIVES 
 
 The main objectives of SchemeWise are:
 
