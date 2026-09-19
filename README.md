@@ -48,7 +48,7 @@ The main objectives of SchemeWise are:
 
 SchemeWise consists of five major user-facing modules.
 
-## 1. 🏠 Home Module
+## 1. 🏠 HOME MODULE:
 
 The Home module acts as the main entry point to the application.
 
