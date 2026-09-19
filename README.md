@@ -64,7 +64,7 @@ The Home module acts as the main entry point to the application.
 
 ---
 
-## 2. ✅ Eligibility Checker Module
+## 2. ✅ ELIGIBLITY CHECKER MODULE:
 
 The Eligibility Checker is one of the core modules of SchemeWise.
 
