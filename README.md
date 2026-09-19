@@ -44,7 +44,7 @@ The main objectives of SchemeWise are:
 
 ---
 
-# 📦 Project Modules
+# 📦 PROJECT MODULES:
 
 SchemeWise consists of five major user-facing modules.
 
